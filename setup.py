@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pytest-adaptivistreport',
-    description='pytest plugin that aims to report test cases results to Jira's plugin Adaptivist Test Management.',
+    description='pytest plugin that aims to report test cases results to Jiras plugin Adaptivist Test Management.',
     long_description=open("README.md").read(),
     version='0.0.1',
     url='https://github.com/mabouelfadl/pytest-adaptivistreport',
