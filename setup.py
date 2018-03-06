@@ -7,7 +7,7 @@ setup(
     version='0.0.1',
     url='https://github.com/mabouelfadl/pytest-adaptivistreport',
     download_url='https://github.com/mabouelfadl/pytest-adaptivistreport/archive/0.1.tar.gz',
-    license='BSD',
+    license='proprietary',
     author='Mariam Abouelfadl',
     author_email='mabouelfadl@gmail.com',
     py_modules=['pytest_adaptivistreport'],
