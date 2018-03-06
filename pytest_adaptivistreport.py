@@ -14,7 +14,7 @@ def pytest_runtest_protocol(item, nextitem):
     else:
         test_run_set = True
 
-    if test_run_set and pytest.adaptivisit_test_run_key != None:
+    if test_run_set and pytest.adaptivisit_test_run_key != None and pytest.adaptivist_test_cases_project_key != None:
         for report in reports:
             if report.when == 'teardown':
                 test_run_key = pytest.adaptivisit_test_run_key
