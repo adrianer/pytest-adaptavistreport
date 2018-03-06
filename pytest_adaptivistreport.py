@@ -23,8 +23,8 @@ def pytest_runtest_protocol(item, nextitem):
                 logger.info(test_case_key)
                 logger.info(report.outcome)
                 if report.passed:
-                    adaptivist_instance.edit_test_result_status(test_run_key, test_case_key, "Pass")
+                    pytest.adaptivist_instance.edit_test_result_status(test_run_key, test_case_key, "Pass")
                 elif report.failed:
-                    adaptivist_instance.edit_test_result_status(test_run_key, test_case_key, "Fail")
+                    pytest.adaptivist_instance.edit_test_result_status(test_run_key, test_case_key, "Fail")
 
     return True
