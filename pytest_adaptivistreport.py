@@ -2,12 +2,14 @@ import logging
 import pytest
 from _pytest.runner import runtestprotocol
 
+logger = logging.getLogger("Apadtivist report plugin")
+
 def pytest_runtest_protocol(item, nextitem):
     reports = runtestprotocol(item, nextitem=nextitem)
     try:
         pytest.adaptivisit_test_run_key
     except AttributeError:
-        logging.info("Adaptivist Jira's test management plugin test run key wasn't set in the pytest namespace!")
+        logger.info("Adaptivist Jira's test management plugin test run key wasn't set in the pytest namespace!")
         test_run_set = False
     else:
         test_run_set = True
