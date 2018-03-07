@@ -40,11 +40,11 @@ def pytest_runtest_protocol(item, nextitem):
 
     if should_execute_reporting:
         for report in reports:
-            if report.when == 'teardown':
+            if report.when == 'call':
                 test_name = item.name
                 test_case_key = pytest.adaptivist_test_cases_project_key + "-" + test_name.split('_')[1]
                 logger.info(test_case_key)
-                logger.info(report.outcome.get_result())
+                logger.info(report.outcome)
                 if report.passed:
                     adaptivist_instance.edit_test_result_status(test_run_key, test_case_key, "Pass")
                 elif report.failed:
