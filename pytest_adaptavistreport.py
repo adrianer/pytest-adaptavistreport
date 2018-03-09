@@ -9,7 +9,7 @@ def pytest_runtest_protocol(item, nextitem):
     should_execute_reporting = True
       
     try:
-        test_run_key = getattr(pytest, 'adaptivisit_test_run_key')
+        test_run_key = getattr(pytest, 'adaptavist_test_run_key')
     except AttributeError:
         logger.warning("Adaptavist Jira's test management plugin reporting is not available for this test case! The test run key wasn't set in pytest namespace!")
         should_execute_reporting = False
